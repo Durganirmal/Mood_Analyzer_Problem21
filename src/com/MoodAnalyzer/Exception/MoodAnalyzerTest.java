@@ -5,13 +5,11 @@ import org.junit.Test;
 
 public class MoodAnalyzerTest {	
 	 @Test
-	    public void given_NullMood_Should_Throw_MoodAnalysisException() {
-	        MoodAnalyzer moodAnalyser = new MoodAnalyzer(null);
-	        String mood;
-	        try {
-	            mood = moodAnalyser.analyseMood();
-	        } catch (MoodAnalysisException e) {
-	            Assert.assertEquals(MoodAnalysisException.Exception_Type.NULL,e.type);
-	        }
+	    public void given_AnyMood_Should_Return_HAPPY() {
+	        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+	        String mood = moodAnalyzer.MoodAnalyzer("I am In Any Mood");
+	        Assert.assertEquals("HAPPY", mood);
+
 	    }
+
 	}

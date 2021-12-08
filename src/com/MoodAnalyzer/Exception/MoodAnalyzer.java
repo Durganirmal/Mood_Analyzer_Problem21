@@ -2,19 +2,18 @@ package com.MoodAnalyzer.Exception;
 
 public class MoodAnalyzer {
 
-	 private String message;
+	private String message;
 
-	    public MoodAnalyzer() {
-	    }
+    public MoodAnalyzer() {
+    }
 
-	    public MoodAnalyzer(String message) {
-	        this.message = message;
-	    }
-	    public String analyseMood() {
-	        if (this.message.contains("Sad"))
-	            return "SAD";
-	        else
-	            return "HAPPY";
-	    }
-	}
-
+    public MoodAnalyzer(String message) {
+        this.message = message;
+    }
+    public String analyseMood() {
+        if (this.message.contains("Sad"))
+            return "SAD";
+        else
+            return "HAPPY";
+    }
+}
